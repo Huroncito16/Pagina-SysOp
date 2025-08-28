@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER EN CSS</title>
+    
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Objetivo" class="nav__links">Objetivos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Colegio" class="nav__links">Colegio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Integrantes" class="nav__links">Integrantes</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Preguntas" class="nav__links">Preguntas</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Presentacio en Colegio</h1>
+            <p class="hero__paragraph">Se realizo la presentacion de sistemas 
+                operativos en el colegio "Americano" de huehuetenango para los 
+                estudiantes de "Sexto perito en computaci&oacute;n" con el objetivo de que 
+                conocieran mejor de el area de sistemas operativos y de la carrera 
+                de Ingenieria en sistemas de la Universidad mariano Galvez</p>
+        </section>
+    </header>
+
+    <main>
+        <section class="container about" id="Objetivo">
+            <h2 class="subtitle">¿Cual fue el objetivo?</h2>
+            <p class="about__paragraph">La presentacion en el colegio tubo varios 
+                motivos para que se llevara a cabo tato personales como academicos 
+                para nosotros como para ellos, los principales son:</p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./images/shapes.svg" class="about__icon">
+                    <h3 class="about__title">Amplacion de conocimientos</h3>
+                    <p class="about__paragrah">Ampliar el conocimiento de los jovenes en el 
+                        establiecimiento en el area de sistemas y su funcionamiento</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/paint.svg" class="about__icon">
+                    <h3 class="about__title">Presencia</h3>
+                    <p class="about__paragrah">Hacer notar la presencia de la Universidad 
+                        Como de la carrera de ingenieria en sistemas a los estudiantes de 
+                        Bach para ser una opcion entre las universidades</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/code.svg" class="about__icon">
+                    <h3 class="about__title">Cumplimineto</h3>
+                    <p class="about__paragrah">Cumplimiento de la programacion y lineamientos de proyecto en el curso de 
+                        sistemas Operativos</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="knowledge" id="Colegio">
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h2 class="subtitle">Colegio Seleccionado</h2>
+                    <p class="knowledge__paragraph">
+                        Seleccionamos este colegio para impartir la charla sobre sistemas 
+                        operativos porque, además de ser una institución reconocida por su compromiso 
+                        con la formación académica, uno de los integrantes de nuestro grupo tuvo la 
+                        oportunidad de estudiar aquí y guarda un profundo agradecimiento hacia la 
+                        comunidad educativa. Esta experiencia personal nos motiva a devolver un poco 
+                        de lo recibido, compartiendo conocimientos que puedan ser útiles para las 
+                        nuevas generaciones y fortaleciendo así el vínculo entre estudiantes y egresados.
+                    </p>
+                    <a href="https://maps.app.goo.gl/qaQsSZneyBjwJurSA" target="_blank" class="cta">Ver Ubicación</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img id="slider-img" src="img_fotos/1.jpg" class="knowledge__img" alt="Imagen presentación">
+                </figure>
+            </div>
+            <script>
+                let currentIndex = 1;
+                const totalImages = 12;
+                const imgElement = document.getElementById("slider-img");
+
+                setInterval(() => {
+                    currentIndex++;
+                    if (currentIndex > totalImages) {
+                        currentIndex = 1;
+                    }
+                    imgElement.src = `./img_fotos/${currentIndex}.jpg`;
+                }, 5000);
+            </script>
+        </section>
+
+
+        <section class="card container" id="Integrantes">
+            <h2 class="subtitle">Integrantes de Grupo</h2>
+
+            <div class="card__table">
+                <div class="card__element">
+                    <p class="card__name">integrante</p>
+                    <img class="" src="/images/face3.jpg" alt="" width="150px">
+
+                    <div class="card__items">
+                        <p>Hugo Roberto Gutierrez Lopez</p>
+                        <p>4490-23-4035</p>
+                        <p>instalacion de linux y uso</p>
+                    </div>
+                </div>
+
+
+                <div class="card__element price__element--best">
+                    <p class="card__name">Coordinador</p>
+                    <img src="/images/face4.jpg" alt="" width="150px">
+
+                    <div class="card__items">
+                        <p>Antony Ramiro Santos Lopez</p>
+                        <p>4490-23-4035</p>
+                        <p>funcionamiento de un SO, Arquitecuras de computadores y procesadores </p>
+                    </div>
+                </div>
+
+
+                <div class="card__element">
+                    <p class="card__name">Integrante</p>
+                    <img src="/images/face2.jpg" alt="" width="150px">
+
+                    <div class="card__items">
+                        <p>Melanie Mariana Morales Lopez</p>
+                        <p>4490-23-</p>
+                        <p>Harware, Software, Tipos de softWare y Figuras clave del software libre</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+            <div class="slide-contenedor">
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/1.png" alt="" width="100%">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/2.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/3.png" alt=""height="500px" >
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/4.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/5.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/6.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/7.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/8.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/9.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/10.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/11.png" alt=""height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/12.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/13.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/14.png" alt=""height="500px" >
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/15.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/16.png" alt=""height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/17.png" alt=""height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/19.png" alt=""height="100%">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/20.png" alt=""height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/21.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/22.png" alt=""height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/23.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/24.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/25.png" alt="" height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/26.png" alt=""height="500px">
+                </div>
+                <div class="miSlider fade">
+                    <img src="img_Presentacion/27.png" alt=""height="500px">
+                </div>
+                <div class="direcciones">
+                    <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                    <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+                </div>
+                <div class="barras">
+                    <span class="barra active" onclick="posicionSlide(1)"></span>
+                    <span class="barra" onclick="posicionSlide(2)"></span>
+                    <span class="barra" onclick="posicionSlide(3)"></span>
+                </div>
+            </div>
+
+
+        <section class="questions container" id="Preguntas">
+            <h2 class="subtitle">Temario de la presentacion</h2>
+            
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Qué sistemas operativos se usan en la carrera?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">En la carrera se utilizan principalmente 
+                            sistemas como Windows, Linux y macOS, ya que son los más comunes 
+                            en la industria y permiten a los estudiantes desarrollar 
+                            habilidades en diferentes entornos.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Por qué es importante aprender sobre sistemas operativos?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">Porque nos permite comprender cómo funciona 
+                            una computadora desde adentro, cómo se gestionan los procesos, la 
+                            memoria y la seguridad, conocimientos fundamentales para cualquier 
+                            profesional en informática.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Qué oportunidades ofrece la 
+                            Universidad Mariano Gálvez en esta área?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La universidad cuenta con la carrera 
+                            de Ingeniería en Sistemas y Ciencias de la Computación, donde 
+                            se profundiza en sistemas operativos, redes, programación, bases 
+                            de datos y muchas otras áreas de la informática.</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="questions__offer">
+                <h2 class="subtitle">¿Estas listo para aprender CSS?</h2>
+                <p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
+                    architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
+                    eius atque tempora iure ab non autem.</p>
+                <a href="#" class="cta">Aprende ahora</a>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Hola no se que poner aqui XD</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Objetivo</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Colegio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Integrantes</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Presentaciones</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Preguntas</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Fin</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Contactanos</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <h3 class="footer__copyright">Derechos reservados &copy; Estudios Arata_K</h3>
+        </section>
+    </footer>
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+
+</html>
