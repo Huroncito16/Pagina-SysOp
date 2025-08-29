@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTER EN CSS</title>
+    <title>Presentacion Sys-Op</title>
     
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/slider.css">
 
     <meta name="theme-color" content="#2091F9">
 
@@ -50,7 +51,7 @@
                     <a href="#Integrantes" class="nav__links">Integrantes</a>
                 </li>
                 <li class="nav__items">
-                    <a href="#Preguntas" class="nav__links">Preguntas</a>
+                    <a href="#Preguntas" class="nav__links">temario</a>
                 </li>
 
                 <img src="./images/close.svg" class="nav__close">
@@ -104,39 +105,37 @@
         </section>
 
         <section class="knowledge" id="Colegio">
-            <div class="knowledge__container container">
-                <div class="knowledege__texts">
-                    <h2 class="subtitle">Colegio Seleccionado</h2>
-                    <p class="knowledge__paragraph">
-                        Seleccionamos este colegio para impartir la charla sobre sistemas 
-                        operativos porque, además de ser una institución reconocida por su compromiso 
-                        con la formación académica, uno de los integrantes de nuestro grupo tuvo la 
-                        oportunidad de estudiar aquí y guarda un profundo agradecimiento hacia la 
-                        comunidad educativa. Esta experiencia personal nos motiva a devolver un poco 
-                        de lo recibido, compartiendo conocimientos que puedan ser útiles para las 
-                        nuevas generaciones y fortaleciendo así el vínculo entre estudiantes y egresados.
-                    </p>
-                    <a href="https://maps.app.goo.gl/qaQsSZneyBjwJurSA" target="_blank" class="cta">Ver Ubicación</a>
-                </div>
-
-                <figure class="knowledge__picture">
-                    <img id="slider-img" src="img_fotos/1.jpg" class="knowledge__img" alt="Imagen presentación">
-                </figure>
+        <div class="knowledge__container container">
+            <div class="knowledege__texts">
+            <h2 class="subtitle">Colegio Seleccionado</h2>
+            <p class="knowledge__paragraph">
+                Seleccionamos este colegio para impartir la charla sobre sistemas 
+                operativos porque, además de ser una institución reconocida por su compromiso 
+                con la formación académica, uno de los integrantes de nuestro grupo tuvo la 
+                oportunidad de estudiar aquí y guarda un profundo agradecimiento hacia la 
+                comunidad educativa. Esta experiencia personal nos motiva a devolver un poco 
+                de lo recibido, compartiendo conocimientos que puedan ser útiles para las 
+                nuevas generaciones y fortaleciendo así el vínculo entre estudiantes y egresados.
+            </p>
+            <a href="https://maps.app.goo.gl/qaQsSZneyBjwJurSA" target="_blank" class="cta">Ver Ubicación</a>
             </div>
-            <script>
-                let currentIndex = 1;
-                const totalImages = 12;
-                const imgElement = document.getElementById("slider-img");
 
-                setInterval(() => {
-                    currentIndex++;
-                    if (currentIndex > totalImages) {
-                        currentIndex = 1;
-                    }
-                    imgElement.src = `./img_fotos/${currentIndex}.jpg`;
-                }, 5000);
-            </script>
+            <figure class="knowledge__picture">
+            <img id="slider-img" src="img_fotos/1.jpg" class="knowledge__img" alt="Imagen presentación">
+            </figure>
+        </div>
         </section>
+
+        <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div class="controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+        </div>
+
+        
 
 
         <section class="card container" id="Integrantes">
@@ -173,7 +172,7 @@
 
                     <div class="card__items">
                         <p>Melanie Mariana Morales Lopez</p>
-                        <p>4490-23-</p>
+                        <p>4490-23-4361</p>
                         <p>Harware, Software, Tipos de softWare y Figuras clave del software libre</p>
                     </div>
                 </div>
@@ -181,105 +180,88 @@
 
             </div>
         </section>
+        <section>
+                <div style="position: relative; width: 75%; height: 0; padding-top: 56.25%;
+                            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin: 1.6em auto 0.9em auto; 
+                            overflow: hidden; border-radius: 8px; will-change: transform;">
+                <iframe loading="lazy" 
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; 
+                                border: none; padding: 0; margin: 0;"
+                        src="https://www.canva.com/design/DAGuGRWs91Y/NQGbCAn3VnL_vHpCQsWPdw/view?embed" 
+                        allowfullscreen>
+                </iframe>
+                </div>
+        </section>
+        <section>
+                <div style="position: relative; width: 80%; height: 0; padding-top: 56.25%;
+                            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin: 1.6em auto 0.9em auto;
+                            overflow: hidden; border-radius: 8px; will-change: transform;">
+                <iframe loading="lazy" 
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; 
+                                border: none; padding: 0; margin: 0;"
+                        src="https://www.canva.com/design/DAGuDpofG4Q/5Z5apY2wwt5Rrz9j8GYsRg/view?embed" 
+                        allowfullscreen>
+                </iframe>
+                </div>
 
-            <div class="slide-contenedor">
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/1.png" alt="" width="100%">
+                <div style="text-align: center; margin-bottom: 1em;">
                 </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/2.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/3.png" alt=""height="500px" >
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/4.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/5.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/6.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/7.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/8.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/9.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/10.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/11.png" alt=""height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/12.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/13.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/14.png" alt=""height="500px" >
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/15.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/16.png" alt=""height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/17.png" alt=""height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/19.png" alt=""height="100%">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/20.png" alt=""height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/21.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/22.png" alt=""height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/23.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/24.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/25.png" alt="" height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/26.png" alt=""height="500px">
-                </div>
-                <div class="miSlider fade">
-                    <img src="img_Presentacion/27.png" alt=""height="500px">
-                </div>
-                <div class="direcciones">
-                    <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
-                    <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
-                </div>
-                <div class="barras">
-                    <span class="barra active" onclick="posicionSlide(1)"></span>
-                    <span class="barra" onclick="posicionSlide(2)"></span>
-                    <span class="barra" onclick="posicionSlide(3)"></span>
-                </div>
-            </div>
+        </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
         <section class="questions container" id="Preguntas">
             <h2 class="subtitle">Temario de la presentacion</h2>
             
             <section class="questions__container">
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué sistemas operativos se usan en la carrera?
+                        <h3 class="questions__title">¿que es un sistema operativo?
                             <span class="questions__arrow">
                                 <img src="./images/arrow.svg" class="questions__img">
                             </span>
@@ -294,7 +276,7 @@
 
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Por qué es importante aprender sobre sistemas operativos?
+                        <h3 class="questions__title">procesadores
                             <span class="questions__arrow">
                                 <img src="./images/arrow.svg" class="questions__img">
                             </span>
@@ -309,8 +291,77 @@
 
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué oportunidades ofrece la 
-                            Universidad Mariano Gálvez en esta área?
+                        <h3 class="questions__title">Arquitectura de coputadoras
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La universidad cuenta con la carrera 
+                            de Ingeniería en Sistemas y Ciencias de la Computación, donde 
+                            se profundiza en sistemas operativos, redes, programación, bases 
+                            de datos y muchas otras áreas de la informática.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Harware y software
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La universidad cuenta con la carrera 
+                            de Ingeniería en Sistemas y Ciencias de la Computación, donde 
+                            se profundiza en sistemas operativos, redes, programación, bases 
+                            de datos y muchas otras áreas de la informática.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Figuras importantes del software libre
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La universidad cuenta con la carrera 
+                            de Ingeniería en Sistemas y Ciencias de la Computación, donde 
+                            se profundiza en sistemas operativos, redes, programación, bases 
+                            de datos y muchas otras áreas de la informática.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">instalacion y uso
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La universidad cuenta con la carrera 
+                            de Ingeniería en Sistemas y Ciencias de la Computación, donde 
+                            se profundiza en sistemas operativos, redes, programación, bases 
+                            de datos y muchas otras áreas de la informática.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Arquitectura de coputadoras
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La universidad cuenta con la carrera 
+                            de Ingeniería en Sistemas y Ciencias de la Computación, donde 
+                            se profundiza en sistemas operativos, redes, programación, bases 
+                            de datos y muchas otras áreas de la informática.</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Arquitectura de coputadoras
                             <span class="questions__arrow">
                                 <img src="./images/arrow.svg" class="questions__img">
                             </span>
@@ -323,21 +374,33 @@
                     </div>
                 </article>
             </section>
-
-            <section class="questions__offer">
-                <h2 class="subtitle">¿Estas listo para aprender CSS?</h2>
-                <p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
-                    architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
-                    eius atque tempora iure ab non autem.</p>
-                <a href="#" class="cta">Aprende ahora</a>
-            </section>
         </section>
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer class="footer">
         <section class="footer__container container">
             <nav class="nav nav--footer">
-                <h2 class="footer__title">Hola no se que poner aqui XD</h2>
+                <h2 class="footer__title">Su presencia importa</h2>
 
                 <ul class="nav__link nav__link--footer">
                     <li class="nav__items">
@@ -356,10 +419,7 @@
                         <a href="#" class="nav__links">Presentaciones</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#" class="nav__links">Preguntas</a>
-                    </li>
-                    <li class="nav__items">
-                        <a href="#" class="nav__links">Fin</a>
+                        <a href="#" class="nav__links">Temario</a>
                     </li>
                 </ul>
             </nav>

@@ -1,35 +1,55 @@
-let indice = 1;
-muestraSlides(indice);
+document.addEventListener("DOMContentLoaded", () => {
+  let currentIndex = 1;
+  const totalImages = 12;
+  const imgElement = document.getElementById("slider-img");
 
-function avanzaSlide(n){
-    muestraSlides( indice+=n );
-}
+  // --- Slider automático ---
+  let interval = setInterval(nextImage, 5000);
 
-function posicionSlide(n){
-    muestraSlides(indice=n);
-}
-setInterval(function tiempo(){
-    muestraSlides(indice+=1)
-},4000);
-function muestraSlides(n){
-    let i;
-    let slides = document.getElementsByClassName('miSlider');
-    let barras = document.getElementsByClassName('barra');
+  function nextImage() {
+    currentIndex++;
+    if (currentIndex > totalImages) currentIndex = 1;
+    imgElement.src = `./img_fotos/${currentIndex}.jpg`;
+  }
 
-    if(n > slides.length){
-        indice = 1;
+  // --- Modal ---
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.querySelector(".close");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  // Abrir modal al hacer clic en la imagen
+  imgElement.addEventListener("click", () => {
+    clearInterval(interval); // detener automático
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+  });
+
+  // Cerrar modal
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    interval = setInterval(nextImage, 5000); // reactivar automático
+  };
+
+  // Navegación manual dentro del modal
+  nextBtn.onclick = () => {
+    nextImage();
+    modalImg.src = imgElement.src;
+  };
+
+  prevBtn.onclick = () => {
+    currentIndex--;
+    if (currentIndex < 1) currentIndex = totalImages;
+    imgElement.src = `./img_fotos/${currentIndex}.jpg`;
+    modalImg.src = imgElement.src;
+  };
+
+  // Cerrar con tecla ESC
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modal.style.display = "none";
+      interval = setInterval(nextImage, 5000);
     }
-    if(n < 1){
-        indice = slides.length;
-    }
-    for(i = 0; i < slides.length; i++){
-        slides[i].style.display = 'none';
-    }
-    for(i = 0; i < barras.length; i++){
-        barras[i].className = barras[i].className.replace(" active", "");
-    }
-
-    slides[indice-1].style.display = 'block';
-    barras[indice-1].className += ' active';
-
-}
+  });
+});
