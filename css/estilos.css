@@ -4,7 +4,8 @@
     --padding-container: 100px 0;
     --color-title: #6a149f;
     --color-fondo: #000000;
-    --color-element-card: #6a149f;
+    --color-element-card: #313131;
+    --color-shadow-card: rgb(81, 0, 108);
     --color-presentacion: #202020;
 }
 
@@ -222,6 +223,7 @@ body {
     --color-plan: #ffffff;
     --bg-cta: #fff;
     --color-items: #ffffff;
+    box-shadow: 0 16px 40px var(--color-shadow-card);
 }
 
 .card__name{
